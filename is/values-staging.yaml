@@ -20,7 +20,6 @@ wso2:
   deployment:
     wso2is:
       imageName: "wso2is"
-      imageTag: "latest"
       replicas: 1
       minReadySeconds: 30
       strategy:

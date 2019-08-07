@@ -56,7 +56,7 @@ spec:
       containers:
       - name: wso2is
         {{ if .Values.wso2.dockerRegistry }}
-        image: {{ .Values.wso2.dockerRegistry }}/{{ default "wso2is" .Values.wso2.deployment.wso2is.imageName }}:{{ default "5.8.0" .Values.wso2.deployment.wso2is.imageTag }}
+        image: {{ .Values.wso2.dockerRegistry }}/{{ default "wso2is" .Values.wso2.deployment.wso2is.imageName }}
         {{ else if or (eq .Values.wso2.subscription.username "") (eq .Values.wso2.subscription.password "") }}
         image: wso2/{{ default "wso2is" .Values.wso2.deployment.wso2is.imageName }}:{{ default "5.8.0" .Values.wso2.deployment.wso2is.imageTag }}
         {{ else }}
